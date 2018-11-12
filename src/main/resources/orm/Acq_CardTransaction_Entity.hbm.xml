@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.acq.users.entity.Acq_CardTransaction_Entity" table="acq_transaction_summary" catalog="acquiro_ver2">    	  
+    	<id name="id" type="java.lang.Integer">
+            <column name="ID" />    
+            <generator class="identity" />
+        </id>
+        <property name="merchantId" type="java.lang.Integer">
+            <column name="MERCHANTID"/>
+        </property>
+        <property name="orgId" type="java.lang.Integer">
+            <column name="ORGID" />
+        </property>
+        <property name="userid" type="java.lang.Integer">
+            <column name="USERID" />
+        </property>        
+        <property name="mobile" type="string">
+            <column name="MOBILENO" />
+        </property>
+        <property name="amount" type="string">
+            <column name="AMOUNT" />
+        </property>
+        <property name="email" type="string">
+            <column name="EMAIL" />
+        </property>
+         <property name="status" type="java.lang.Integer">
+            <column name="STATUS" />
+        </property>
+         <property name="ezMdr" type="string">
+            <column name="AcqMDR" />
+        </property>
+         <property name="bankMdr" type="string">
+            <column name="BANKMDR" />
+        </property>
+        <property name="serviceTax" type="string">
+            <column name="SERVICETAX" />
+        </property>
+         <property name="date" type="java.sql.Timestamp">
+            <column name="DATETIME" />
+        </property>
+         <property name="otpDateTime" type="java.sql.Timestamp">
+            <column name="OTPDATETIME" />
+        </property>   
+         <property name="description" type="string">
+            <column name="STATUSDESCRIPTION" />
+        </property>     
+        <property name="txnType" type="string">
+            <column name="TXNTYPE" />
+        </property>
+        <property name="carPanNo" type="string">
+            <column name="CARDPANNO" />
+        </property>
+        <property name="customerId" type="string">
+            <column name="CUSTOMERID" />
+        </property>  
+        <property name="payoutStatus" type="java.lang.Integer">
+            <column name="PAYOUTSTATUS" />
+        </property>   
+        <property name="payoutDateTime" type="java.sql.Timestamp">
+            <column name="PAYOUTDATETIME" />
+        </property>          
+         <property name="loyaltyId" type="java.lang.Integer">
+            <column name="LOYALTYID" />
+        </property>
+        <property name="usedPoints" type="java.lang.Integer">
+            <column name="USEDPOINTS" />
+        </property>
+        <property name="acquirerCode" type="string">
+            <column name="AQUIRER_CODE" />
+        </property>
+       
+  		<property name="cashBackAmt" type="string">
+            <column name="CASHBACKAMT" />
+        </property>
+        <property name="acquirerMdr" type="string">
+            <column name="AQUIRER_MDR" />
+        </property>
+       
+         <property name="appCertificate" type="string">
+            <column name="APPCERTIFICATE" />
+        </property>
+         <property name="aid" type="string">
+            <column name="AID" />
+        </property>
+         <property name="systemUtilityFee" type="string">
+            <column name="SYSTMUTLTYFEE" />
+        </property>
+         <property name="scriptResult" type="string">
+            <column name="SCRIPTRESULT" />
+        </property>
+    </class>
+</hibernate-mapping>

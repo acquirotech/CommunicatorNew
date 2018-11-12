@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.acq.users.entity.Acq_SysParams_Entity" table="acq_settings" catalog="acquiro_ver2">    	  
+    	<id name="id" type="java.lang.Long">
+            <column name="id" />    
+            <generator class="identity" />        
+        </id>  
+        <property name="serviceTax" type="string">
+            <column name="servicetax" />
+        </property>
+         <property name="mdrDebit1" type="string">
+            <column name="mdrdebit1" />
+        </property>
+         <property name="mdrDebit2" type="string">
+            <column name="mdrdebit2" />
+        </property>
+         <property name="mdrCr" type="string">
+            <column name="mdrcr" />
+        </property>
+         <property name="mdrCrpn" type="string">
+            <column name="mdrcrpn" />
+        </property>
+         <property name="mdrAmex" type="string">
+            <column name="mdramex" />
+        </property>
+         <property name="other" type="string">
+            <column name="other" />
+        </property>
+         <property name="mdrMobikwik" type="string">
+            <column name="MDRMOBIKWIK" />
+        </property>
+        <property name="mdrPayUmoney" type="string">
+            <column name="MDRPAYUMONEY" />
+        </property>
+         <property name="mdrFreecharge" type="string">
+            <column name="MDRFREECHARGE" />
+        </property>
+        <property name="mdrCitrus" type="string">
+            <column name="MDRCITRUS" />
+        </property>
+  		<property name="mdrAirtel" type="string">
+            <column name="MDRAIRTEL" />
+        </property>
+  		<property name="mdrCashAtPos" type="string">
+            <column name="CASHATPOSAMT" />
+        </property>
+  		<property name="serviceTaxCashAtPos" type="string">
+            <column name="CASHATPOSSERVICETAX" />
+        </property>
+  		<property name="maintenanceMode" type="string">
+            <column name="MAINTENANCEMODE" />
+        </property>
+        <property name="maintenanceReason" type="string">
+            <column name="MAINTENANCEREASON" />
+        </property> 
+        <property name="appVersion" type="string">
+            <column name="APPVERSION" />
+        </property>
+        <property name="acquirerCode" type="string">
+            <column name="AQUIRER_CODE" />
+        </property>
+        <property name="txnTaxAmt" type="string">
+            <column name="TXNTAXAMT" />
+        </property>
+         <property name="systmUtltyAmt" type="string">
+            <column name="SYSTEMUTILITYAMT" />
+        </property>
+         <property name="systmUtltyFee" type="string">
+            <column name="SYSTEMUTILITYFEE" />
+        </property>
+        
+    </class>
+</hibernate-mapping>

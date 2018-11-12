@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.acq.users.entity.Acq_BankIt_Transaction_Entity" table="acq_bankit_transaction" catalog="acquiro_ver2">    	  
+    	<id name="id" type="string">
+            <column name="ID" unique = "true"/>    
+              <generator class="identity" />        
+        </id>  
+        <property name="merchantId" type="string">
+            <column name="MERCHANT_ID" length="20"/>
+        </property>
+        <property name="transactionType" type="string">
+            <column name="TRANSACTION_TYPE" length="45"/>
+        </property>
+        <property name="amount" type="string">
+            <column name="AMOUNT" />
+        </property>
+        <property name="customerId" type="string">
+            <column name="CUSTOMER_ID" />
+        </property>
+          <property name="ifsc" type="string">
+            <column name="IFSC" length="20"/>
+        </property>
+          <property name="accountNo" type="string">
+            <column name="ACCOUNT_NO" length="20"/>
+        </property>
+         <property name="recipientName" type="string">
+            <column name="RECIPIENT_NAME" length="70"/>
+        </property>
+        
+         <property name="clientRefId" type="string">
+            <column name="CLIENT_REF_ID" length="45"/>
+        </property>
+          <property name="recipientId" type="string">
+            <column name="RECIPIENT_ID" length="45"/>
+        </property>
+          <property name="txnId" type="string">
+            <column name="TXN_ID" length="45"/>
+        </property>
+          <property name="status" type="string">
+            <column name="STATUS" length="45"/>
+        </property>
+          <property name="dateTime" type="string">
+            <column name="DATETIME" length="45"/>
+        </property>
+          <property name="sessionId" type="string">
+            <column name="SESSION_ID" length="45"/>
+        </property>
+          <property name="message" type="string">
+            <column name="MESSAGE" length="300"/>
+        </property>
+          <property name="bankName" type="string">
+            <column name="BANK_NAME" length="100"/>
+        </property>
+          <property name="mobileNo" type="string">
+            <column name="MOBILE_NO" length="12"/>
+        </property>
+        
+        
+        
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.acq.users.entity.AcqDeviceDetails" table="acq_terminal_user_info" catalog="acquiro_ver2">    	  
+    	<id name="userId" type="string">
+            <column name="USER_ID" />    
+            <generator class="identity" />        
+        </id>  
+        <property name="terminalId" type="string">
+            <column name="BANK_TID"/>
+        </property>
+        <property name="memberId" type="string">
+            <column name="INTEGRATIONKEY" />
+        </property>
+         
+    </class>
+    
+    
+</hibernate-mapping>

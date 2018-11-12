@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.acq.users.entity.Acq_TerminalInfo_Entity" table="acq_terminal_user_info" catalog="acquiro_ver2">    	  
+    	<id name="id" type="java.lang.Long">
+            <column name="id" />            
+        </id>  
+         <property name="userId" type="java.lang.Long">
+            <column name="user_id" length="20" />
+        </property>
+        
+        
+        <property name="mdrDebit1" type="string">
+            <column name="mdr_debit1" length="14" />
+        </property>
+        <property name="mdrDebit2" type="string">
+            <column name="mdr_debit2" length="14" />
+        </property>
+        
+        <property name="mdrCreditNpre" type="string">
+            <column name="mdr_credit_npre" length="14" />
+        </property>
+        <property name="mdrCreditPre" type="string">
+            <column name="mdr_credit_pre" length="14" />
+        </property>
+        <property name="mdrAmex" type="string">
+            <column name="mdr_amex" length="14" />
+        </property>
+        <property name="other" type="string">
+            <column name="other" length="14" />
+        </property>
+         <property name="mdrMobikwik" type="string">
+            <column name="mdr_mobikwik" length="14" />
+        </property>
+  		<property name="serialNo" type="string">
+            <column name="SERIAL_NO" length="50" />
+        </property>
+  		<property name="deviceType" type="string">
+            <column name="DEVICE_TYPE" length="20" />
+        </property>
+        <property name="bankTid" type="string">
+            <column name="BANK_TID" length="14" />
+        </property>
+        <property name="mdrCashAtPos" type="string">
+            <column name="MDRCASHATPOS" />
+        </property>
+        <property name="rechargeBal" type="string">
+            <column name="RECHARGE_BAL" />
+        </property>
+  
+    </class>
+</hibernate-mapping>

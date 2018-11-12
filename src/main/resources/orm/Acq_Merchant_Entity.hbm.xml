@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.acq.users.entity.Acq_Merchant_Entity" table="acq_merchant_summary" catalog="acquiro_ver2">    	  
+    	<id name="merchantId" type="string">
+            <column name="ID" />            
+        </id>  
+        <property name="marketingName" type="string">
+            <column name="MARKETING_NAME"  />
+        </property>
+  		 <property name="merchantName" type="string">
+            <column name="NAME"  />
+        </property>
+         <property name="merchantTID" type="string">
+            <column name="BANK_MID"  />
+        </property>
+        <property name="merchantPinCode" type="string">
+            <column name="BUSINESS_PINCODE"  />
+        </property>
+        <property name="address1" type="string">
+            <column name="ADDRESS1"  />
+        </property>
+    </class>
+</hibernate-mapping>

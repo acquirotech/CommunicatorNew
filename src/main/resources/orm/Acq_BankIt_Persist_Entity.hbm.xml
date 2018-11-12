@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.acq.users.entity.Acq_BankIt_Persist_Entity" table="acq_bankit_temp" catalog="acquiro_ver2">    	  
+    	<id name="id" type="string">
+            <column name="ID" unique = "true"/>    
+              <generator class="identity" />        
+        </id>  
+        <property name="merchantId" type="string">
+            <column name="MERCHANT_ID" length="20"/>
+        </property>
+        <property name="terminalId" type="string">
+            <column name="TERMINAL_ID" length="45"/>
+        </property>
+        <property name="request" type="string">
+            <column name="REQUEST" />
+        </property>
+        <property name="response" type="string">
+            <column name="RESPONSE" length="12"/>
+        </property>
+          <property name="requestTime" type="string">
+            <column name="REQUEST_TIME" length="20"/>
+        </property>
+          <property name="responseTime" type="string">
+            <column name="RESPONSE_TIME" length="20"/>
+        </property>
+         <property name="serviceName" type="string">
+            <column name="SERVICE_TYPE" length="45"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,61 @@
+<web-app id="WebApp_ID" version="2.4"
+	xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
+	http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<display-name>Communicator</display-name>
+
+	<!-- Spring MVC -->
+	
+	<servlet>
+		<servlet-name>mvc-dispatcher</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>mvc-dispatcher</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+		    /WEB-INF/classes/spring-database.xml,
+			/WEB-INF/spring-security.xml
+		</param-value>
+	</context-param>
+
+	<!-- Spring Security -->
+ <security-constraint>
+     <web-resource-collection>
+          <web-resource-name>Forbidden</web-resource-name>
+          <url-pattern>/WEB-INF/pages/*</url-pattern>
+          <http-method>GET</http-method>
+          <http-method>PUT</http-method>
+          <http-method>DELETE</http-method>
+          <http-method>TRACE</http-method>
+     </web-resource-collection>     
+	</security-constraint>
+	
+	<error-page>
+	<error-code>404</error-code>
+	<location>/WEB-INF/pages/404.jsp</location>
+  </error-page>
+	<error-page>
+    	<error-code>405</error-code>
+    	<location>/login.jsp</location>
+	</error-page>
+	<mime-mapping>
+    <extension>sub</extension>
+    <mime-type>application/json</mime-type>
+</mime-mapping>
+<session-config>
+    <session-timeout>720</session-timeout>
+	</session-config>
+	<welcome-file-list>
+		<welcome-file>/WEB-INF/pages/index.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>

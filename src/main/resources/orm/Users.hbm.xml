@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.acq.users.model.Acq_User" table="acq_webusers_details" catalog="acquiro_ver2">
+        <id name="username" type="string">
+            <column name="emailid" length="45" />
+            <generator class="assigned" />
+        </id>
+        <property name="password" type="string">
+            <column name="password" length="70" not-null="true" />
+        </property>
+        <property name="enabled" type="boolean">
+            <column name="enabled" not-null="true" />
+        </property>
+        
+        <property name="empRole" type="string">
+            <column name="emprole" not-null="true" />
+        </property>
+     
+     <property name="empName" type="string">
+            <column name="empname" not-null="false" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.acq.users.entity.Acq_TerminalUser_Entity" table="acq_terminal_users" catalog="acquiro_ver2">    	  
+    	<id name="id" type="java.lang.Long">
+            <column name="id" />    
+            <generator class="identity" />        
+        </id>  
+        <property name="phoneNo" type="java.lang.Long">
+            <column name="login_id" unique="true" />
+        </property>
+        <property name="orgId" type="java.lang.Long">
+            <column name="ORG_ID" />
+        </property>
+        <one-to-one name="ezDevice" class="com.acq.users.entity.Acq_Terminal_Info" cascade="all" fetch="select"></one-to-one> 
+    </class>
+</hibernate-mapping>

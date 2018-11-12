@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.acq.users.entity.Acq_Store_Entity" table="acq_store_info" catalog="acquiro_ver2">    	  
+    	<id name="id" type="java.lang.Long">
+            <column name="id" />            
+        </id>  
+        <property name="orgName" type="string">
+            <column name="name" />
+        </property>
+        <property name="merchantId" type="java.lang.Long">
+            <column name="merchant_id" />
+        </property>
+        <property name="orgAddress1" type="string">
+            <column name="ADDRESS1" />
+        </property>
+        <property name="orgAddress2" type="string">
+            <column name="ADDRESS2" />
+        </property>
+        <property name="city" type="string">
+            <column name="CITY" />
+        </property>
+        <property name="state" type="string">
+            <column name="STATE" />
+        </property>
+         <property name="country" type="string">
+            <column name="COUNTRY" />
+        </property>
+         <property name="zip" type="string">
+            <column name="PINCODE" />
+        </property>
+                         
+  
+    </class>
+</hibernate-mapping>

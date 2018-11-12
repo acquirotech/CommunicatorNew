@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.acq.users.entity.Acq_CustPhone_Entity" table="acq_customer2" catalog="acquiro_ver2">    	  
+    	<id name="cardPanNo" type="string">
+            <column name="cardpan_no" />
+        </id>
+        <property name="custPhone" type="string">
+            <column name="phone_no" />
+        </property>
+    </class>
+</hibernate-mapping>

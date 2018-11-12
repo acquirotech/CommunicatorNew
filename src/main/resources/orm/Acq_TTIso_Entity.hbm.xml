@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.acq.users.entity.Acq_TTIso_Entity" table="acq_switch_iso_log" catalog="acquiro_ver2">    	  
+    	<id name="id" type="string">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <property name="transactionId" type="string">
+            <column name="TRANSACTIONID"/>
+        </property>
+        <property name="isoRequest" type="string">
+            <column name="REQISO" />
+        </property>
+         <property name="isoResponse" type="string">
+            <column name="RESISO" />
+        </property>
+         <property name="switchLab" type="string">
+            <column name="SWITCHLAB" />
+        </property>
+        <property name="requestTime" type="string">
+            <column name="REQTIME" />
+        </property>
+         <property name="responseTime" type="string">
+            <column name="RESTIME" />
+        </property>
+    </class>    
+</hibernate-mapping>

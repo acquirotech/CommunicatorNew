@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.acq.users.entity.Acq_CardTxnInfo_Entity" table="acq_transaction" catalog="acquiro_ver2">    	  
+    	<id name="id" type="java.lang.Long">
+            <column name="id" />    
+             </id>  
+      <property name="userId" type="java.lang.Long">
+            <column name="user_id" length="20"/>
+        </property>
+        <property name="orgId" type="java.lang.Long">
+            <column name="org_id" length="20"/>
+        </property>
+        <property name="merchantId" type="java.lang.Long">
+            <column name="merchant_id" length="20"/>
+        </property>
+        <property name="totalAmount" type="string">
+            <column name="amount" not-null="true"/>
+        </property>
+        <property name="ipAddress" type="string">
+            <column name="ip_address" not-null="true"/>
+        </property>
+        <property name="latitude" type="string">
+            <column name="latitude" not-null="true"/>
+        </property>
+        <property name="logitude" type="string">
+            <column name="longitude"/>
+        </property>
+        <property name="imeiNo" type="string">
+            <column name="imeino" not-null="true"/>
+        </property>
+        <property name="cardHolderName" type="string">
+            <column name="cardholder_name" not-null="true"/>
+        </property>
+         <property name="cardType" type="string">
+            <column name="card_type" not-null="true"/>
+        </property>
+        <property name="cardExpDate" type="string">
+            <column name="cardexp_date" not-null="true" />
+        </property>
+         <property name="dateTime" type="string">
+            <column name="datetime" not-null="true"/>
+        </property>
+         <property name="custMobile" type="string">
+            <column name="cust_mobile"/>
+        </property>
+         <property name="custEmail" type="string">
+            <column name="cust_email" length="100"/>
+        </property>
+        <property name="cardPanNo" type="string">
+            <column name="cardpan_no" not-null="true"/>
+        </property>
+         <property name="txnStatus" type="string">
+            <column name="txstatus" not-null="true"/>
+        </property>
+       <one-to-one name="mdrdetailentity" class="com.acq.users.entity.Acq_CardTxnMdrInfo_Entity" cascade="all" ></one-to-one>
+   <!--      <one-to-one name="mdrdetailentity" class="com.ez.users.entity.EzTransactionMdrDetailsEntity" cascade="all" ></one-to-one>  -->
+    </class>
+</hibernate-mapping>

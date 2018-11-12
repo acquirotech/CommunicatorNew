@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.acq.users.entity.Acq_RiskRules_Entity" table="acq_hold_transaction" catalog="acquiro_ver2">    	  
+    	<id name="id" type="java.lang.Integer">
+            <column name="ID" unique = "true"/>    
+              <generator class="identity" />        
+        </id>
+        <property name="txnId" type="java.lang.Integer">
+            <column name="TXN_ID" length="20"/>
+        </property>
+        <property name="description" type="string">
+            <column name="DESCRIPTION" length="45"/>
+        </property>
+        <property name="dateTime" type="string">
+            <column name="DATETIME" />
+        </property>  
+        <property name="status" type="string">
+            <column name="STATUS" />
+        </property>  
+    </class>
+</hibernate-mapping>

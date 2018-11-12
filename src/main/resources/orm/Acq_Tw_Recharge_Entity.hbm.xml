@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.acq.users.entity.Acq_Tw_Recharge_Entity" table="acq_recharge" catalog="acquiro_ver2">    	  
+    	<id name="id" type="string">
+            <column name="ID" unique = "true"/>    
+              <generator class="identity" />        
+        </id>  
+        <property name="amount" type="java.math.BigDecimal">
+            <column name="AMOUNT" length="20"/>
+        </property>
+        <property name="sessionId" type="string">
+            <column name="SESSION_ID" length="45"/>
+        </property>
+        <property name="subscriberId" type="string">
+            <column name="SUBSCRIBER_ID" />
+        </property>
+        <property name="operator" type="string">
+            <column name="OPERATOR" length="60"/>
+        </property>
+          <property name="circle" type="string">
+            <column name="CIRCLE" length="45"/>
+        </property>
+          <property name="rechargeType" type="string">
+            <column name="RECHARGE_TYPE" length="45"/>
+        </property>
+          <property name="paymentMode" type="string">
+            <column name="PAYMENT_MODE" length="45"/>
+        </property>
+          <property name="cardTransactionId" type="string">
+            <column name="CARDTRANSACTION_ID" length="70"/>
+        </property>
+          <property name="serviceType" type="string">
+            <column name="SERVICE_TYPE" length="12"/>
+        </property>
+           <property name="serviceTax" type="string">
+            <column name="SERVICE_TAX" length="12"/>
+        </property>
+        
+         <property name="twId" type="string">
+            <column name="TWID" length="70"/>
+        </property>
+         <property name="status" type="string">
+            <column name="STATUS" length="45"/>
+        </property>
+         <property name="dateTime" type="string">
+            <column name="DATETIME" length="20"/>
+        </property>
+          <property name="message" type="string">
+            <column name="RECHARGE_MESSAGE" length="200"/>           
+        </property>
+         <property name="twStatusCode" type="string">
+            <column name="TW_STATUS_CODE" length="20"/>
+        </property>
+          <property name="optId" type="string">
+            <column name="OPT_ID" length="45"/>
+        </property>
+    </class>
+</hibernate-mapping>

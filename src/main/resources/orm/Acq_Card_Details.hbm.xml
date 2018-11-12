@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.acq.users.entity.Acq_Card_Details" table="acq_transaction_card_summary" catalog="acquiro_ver2">    	  
+    	<id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <property name="transactionId" type="java.lang.Integer">
+            <column name="TRANSACTIONID" length="11" not-null="true" />
+        </property>
+        <property name="terminalId" type="string">
+        	<column name="TERMINALID" length="50" not-null="true" />
+        </property>
+        <property name="cardHolderName" type="string">
+        	<column name="CARDHOLDERNAME" length="100" not-null="false" />
+        </property> 
+          <property name="cardType" type="string">
+        	<column name="CARDTYPE" length="30" not-null="false" />
+        </property>     
+       
+        <property name="ipAddress" type="string">
+        	<column name="IPADDRESS" length="16" not-null="false" />
+        </property> 
+        <property name="imeiNo" type="string">
+        	<column name="IMEINO" length="50" not-null="false" />
+        </property>         
+        
+        <property name="latitude" type="string">
+        	<column name="LATITUDE" length="50" not-null="false" />
+        </property> 
+        <property name="longitude" type="string">
+        	<column name="LONGITUDE" length="50" not-null="false" />
+        </property> 
+       
+        <property name="rrNo" type="string">
+        	<column name="RRNO" length="50" not-null="false" />
+        </property>
+       
+        <property name="authCode" type="string">
+        	<column name="AUTHCODE" length="50" not-null="false" />
+        </property>
+        <property name="batchNo" type="string">
+        	<column name="BATCHNO" length="20" not-null="false" />
+        </property>
+        <property name="stan" type="string">
+        	<column name="STAN" length="100" not-null="false" />
+        </property>
+        <property name="gmtDateTime" type="string">
+        	<column name="CUTOMERMOBILE" />
+        </property>
+        <property name="de61" type="string">
+        	<column name="CUSTOMEREMAIL" />
+        </property>
+        <property name="pinEntered" type="string">
+        	<column name="PINENTERED" />
+        </property>
+        <property name="applicationName" type="string">
+        	<column name="APPLICATIONNAME" />
+        </property>
+  
+    </class>
+</hibernate-mapping>

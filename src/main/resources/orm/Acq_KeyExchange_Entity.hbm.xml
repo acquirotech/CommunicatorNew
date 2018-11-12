@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.acq.users.entity.Acq_KeyExchange_Entity" table="acq_key_exchange" catalog="acquiro_ver2">    	  
+    	<id name="id" type="java.lang.Integer">
+            <column name="ID" />    
+            <generator class="identity" />
+        </id>
+        <property name="userId" type="java.lang.Long">
+            <column name="userid" length="20" />
+        </property>        
+         <property name="dateTime" type="string">
+            <column name="DATETIME"/>
+        </property>
+        <property name="tid" type="string">
+            <column name="TID"/>
+        </property>
+        <property name="mcc" type="string">
+            <column name="MCC"/>
+        </property>
+        <property name="acquirerId" type="string">
+            <column name="ACQUIRERID"/>
+        </property>
+         <property name="status" type="string">
+            <column name="STATUS"/>
+        </property>
+        
+    </class>
+    <class name="com.acq.users.entity.AcqKeyDetailsEntity" table="acq_key_summary" catalog="acquiro_ver1">    	  
+    	<id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <property name="userId" type="string">
+            <column name="userid" length="20" />
+        </property>
+         <property name="deviceId" type="string">
+            <column name="DEVICEID"/>
+        </property>
+         <property name="message" type="string">
+            <column name="MESSAGE"/>
+        </property>
+    </class>
+</hibernate-mapping>
